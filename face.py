@@ -8,6 +8,7 @@ from urllib import request
 import requests
 
 print('인공지능 얼굴인식 관상 프로그램')
+url = input('관상을 보고 싶은 image의 URL을 입력하시오 : ')
 
 facial_features_cordinates = {}
 
@@ -84,7 +85,7 @@ def visualize_facial_landmarks(image, shape, colors=None, alpha=0.75):
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 
-url = "https://cdn.fastpick.co.kr/fastpick/2021/03/image_2322861011616642090118.png"
+#url = "https://cdn.fastpick.co.kr/fastpick/2021/03/image_2322861011616642090118.png"
 # res = request.urlopen(url).read()
 # load the input image, resize it, and convert it to grayscale
 # image = cv2.imread(res)
@@ -107,3 +108,4 @@ for (i, rect) in enumerate(rects):
     output = visualize_facial_landmarks(image, shape)
     cv2.imshow("Image", output)
     cv2.waitKey(0)
+    cv2.destroyAllWindows()
