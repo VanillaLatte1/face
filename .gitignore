@@ -1,3 +1,5 @@
 env/
 image.png/
 test.py/
+*.dat
+*.pyc
