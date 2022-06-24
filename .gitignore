@@ -1,5 +1,6 @@
 env/
 image.jpg/
 test.py/
-*.dat
-*.pyc
+*.dat/
+*.pyc/
+21.jpg/
